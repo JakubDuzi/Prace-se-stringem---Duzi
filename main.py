@@ -30,3 +30,58 @@ jmeno = input("Zadejte jméno: ")
 prijmeni = input("Zadejte příjmení: ")
 inicialy = jmeno[0].upper() + prijmeni[0].upper()
 print("Iniciály jsou:", inicialy)
+
+#Cvičení č. 2
+
+#1 
+mesta = ["Ostrava", "Londyn", "Malmo", "Stockholm", "Kosice"]
+
+#2
+print(mesta)
+
+#3
+print(mesta[3])
+
+#4
+for mesta in mesta:
+    print(mesta)
+
+#5
+for index, mesto in enumerate(mesta, start=1):
+    print(f"{index}. {mesto}")
+
+#6
+mesta.append("BanskaBystrica")
+print(mesta)
+
+#7
+mesta.pop(1)
+
+#8
+print(mesta)
+
+#9
+mesta.sort()
+
+#10
+def mesto2(mesto3, mesto4):
+    if mesto4 in mesto3:
+        return True
+    else:
+        return False
+mesto5 = "Praha"
+
+if mesto2(mesta, mesto5):
+    print(f"{mesto5} se nachází v seznamu.")
+else:
+    print(f"{mesto5} není v seznamu.")
+
+#11
+mesta_na_a = [mesto for mesto in mesta if mesto.lower().startswith('a')]
+print(mesta_na_a)
+
+#12
+slova_vetsi_nez_5 = [mesto for mesto in mesta if len(mesto) > 5]
+
+for slovo in slova_vetsi_nez_5:
+    print(slovo)
